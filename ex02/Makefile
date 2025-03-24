@@ -13,10 +13,13 @@
 CC = c++
 CPPFILES = main.cpp\
 	Bureaucrat.cpp\
-	Form.cpp
+	AForm.cpp\
+	ShrubberyCreationForm.cpp\
+	PresidentialPardonForm.cpp\
+	RobotomyRequestForm.cpp
 FLAGS = -Wall -Werror -Wextra -std=c++17
 OFILES = $(CPPFILES:.cpp=.o)
-NAME = ex01
+NAME = ex02
 
 $(NAME): $(OFILES)
 	$(CC) $(FLAGS) $(OFILES) -o $(NAME)

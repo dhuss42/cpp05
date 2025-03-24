@@ -53,7 +53,7 @@ Bureaucrat::~Bureaucrat()
 /* checks if form is signed							*/
 /* tries to sign and prints appropriate messages	*/
 /*--------------------------------------------------*/
-void	Bureaucrat::signForm(Form& form)
+void	Bureaucrat::signForm(AForm& form)
 {
 	if (form.getIsSigned())
 		std::cout << form.getName() << " is already signed" << std::endl;
@@ -69,6 +69,12 @@ void	Bureaucrat::signForm(Form& form)
 			std::cout << this->getName() << " couldn't sign " << form.getName() << " because the bureaucrat's grade [" << this->getGrade() << "] is too low! The required grade is [" << form.getGradeSign() << "]" << std::endl;
 		}
 	}
+}
+
+void	Bureaucrat::executeForm(AForm const & form) const
+{
+	form.execute(*this);
+	std::cout << _name << " executed " << form.getName() << std::endl;
 }
 
 //------------getters------------//
