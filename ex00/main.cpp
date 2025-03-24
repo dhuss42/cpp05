@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/24 16:03:51 by dhuss             #+#    #+#             */
+/*   Updated: 2025/03/24 16:03:52 by dhuss            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Bureaucrat.hpp"
 
 // try catch allows us to handle the exception without the program crashing
 // wrap insinde try catch block
-	// inside try is what we want to test 
+	// inside try is what we want to test
 	// inside catch (...)
 		// if error is found inside try, execution will move to catch block
 		// (...) catches any type of excpetion could be different types

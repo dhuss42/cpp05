@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 16:04:07 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/24 16:04:08 by dhuss            ###   ########.fr       */
+/*   Created: 2025/03/24 16:04:28 by dhuss             #+#    #+#             */
+/*   Updated: 2025/03/24 16:04:28 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 
 /*----------------------*/
 /* Constructor			*/
 /*----------------------*/
-Form::Form(std::string const name, unsigned int grade_sign, unsigned int grade_exec) : _name(name), _is_signed(0), _grade_sign(grade_sign), _grade_exec(grade_exec)
+AForm::AForm(std::string const name, unsigned int grade_sign, unsigned int grade_exec) : _name(name), _is_signed(0), _grade_sign(grade_sign), _grade_exec(grade_exec)
 {
 	this->checkGrade(_grade_sign);
 	this->checkGrade(_grade_exec);
@@ -24,14 +24,14 @@ Form::Form(std::string const name, unsigned int grade_sign, unsigned int grade_e
 /*----------------------*/
 /* Copy Constructor		*/
 /*----------------------*/
-Form::Form(const Form& src) : _name(src._name), _is_signed(src._is_signed), _grade_sign(src._grade_sign), _grade_exec(src._grade_exec)
+AForm::AForm(const AForm& src) : _name(src._name), _is_signed(src._is_signed), _grade_sign(src._grade_sign), _grade_exec(src._grade_exec)
 {
 }
 
 /*----------------------*/
 /* Assignment operator	*/
 /*----------------------*/
-Form& Form::operator=(const Form& other)
+AForm& AForm::operator=(const AForm& other)
 {
 	if (this != &other)
 	{
@@ -45,7 +45,7 @@ Form& Form::operator=(const Form& other)
 /*----------------------*/
 /* Destructor			*/
 /*----------------------*/
-Form::~Form()
+AForm::~AForm()
 {
 }
 
@@ -54,7 +54,7 @@ Form::~Form()
 /*----------------------------------------------*/
 /* checks if grade is high enough too sign		*/
 /*----------------------------------------------*/
-void	Form::beSigned(const Bureaucrat& bureaucrat)
+void	AForm::beSigned(const Bureaucrat& bureaucrat)
 {
 	if (bureaucrat.getGrade() > _grade_sign)
 		throw(GradeTooLowException());
@@ -64,34 +64,34 @@ void	Form::beSigned(const Bureaucrat& bureaucrat)
 
 //------------getters------------//
 
-std::string Form::getName(void) const
+std::string AForm::getName(void) const
 {
 	return (_name);
 }
 
-bool	Form::getIsSigned(void) const
+bool	AForm::getIsSigned(void) const
 {
 	return (_is_signed);
 }
 
-unsigned int Form::getGradeSign(void) const
+unsigned int AForm::getGradeSign(void) const
 {
 	return (_grade_sign);
 }
 
-unsigned int Form::getGradeExec(void) const
+unsigned int AForm::getGradeExec(void) const
 {
 	return (_grade_exec);
 }
 
 //------------exceptions------------//
 
-const char * Form::GradeTooHighException::what() const _NOEXCEPT
+const char * AForm::GradeTooHighException::what() const _NOEXCEPT
 {
 	return ("grade too high!");
 }
 
-const char * Form::GradeTooLowException::what() const _NOEXCEPT
+const char * AForm::GradeTooLowException::what() const _NOEXCEPT
 {
 	return ("grade too low!");
 }
@@ -101,7 +101,7 @@ const char * Form::GradeTooLowException::what() const _NOEXCEPT
 /*----------------------------------*/
 /* Function to check passed grades	*/
 /*----------------------------------*/
-void	Form::checkGrade(unsigned int grade) const
+void	AForm::checkGrade(unsigned int grade) const
 {
 	if (grade < 1)
 		throw(GradeTooHighException());
@@ -114,9 +114,9 @@ void	Form::checkGrade(unsigned int grade) const
 /*----------------------*/
 /* Insertion Operator	*/
 /*----------------------*/
-std::ostream& operator<<(std::ostream& os, const Form& form)
+std::ostream& operator<<(std::ostream& os, const AForm& AForm)
 {
-	os << "Form name: [" << form.getName() << "]\n\tStatus:\t\t\t [" << form.getIsSigned() << "]\n\tGrade needed to sign:\t [" << form.getGradeSign() << "]\n\tGrade needed to execute: [" << form.getGradeExec() << "]";
+	os << "AForm name: [" << AForm.getName() << "]\n\tStatus:\t\t\t [" << AForm.getIsSigned() << "]\n\tGrade needed to sign:\t [" << AForm.getGradeSign() << "]\n\tGrade needed to execute: [" << AForm.getGradeExec() << "]";
 	return (os);
 }
 

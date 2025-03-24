@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 16:04:14 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/24 16:04:14 by dhuss            ###   ########.fr       */
+/*   Created: 2025/03/24 16:04:33 by dhuss             #+#    #+#             */
+/*   Updated: 2025/03/24 16:04:34 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef AForm_HPP
+# define AForm_HPP
 
 #include <iostream>
 #include <exception>
@@ -19,7 +19,7 @@
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
 	private:
 		std::string const	_name;
@@ -38,10 +38,10 @@ class Form
 				const char * what() const _NOEXCEPT;
 		};
 
-		Form(std::string const name, unsigned int grade_sign, unsigned int grade_exec);
-		Form(const Form& src);
-		Form& operator=(const Form& other);
-		~Form();
+		AForm(std::string const name, unsigned int grade_sign, unsigned int grade_exec);
+		AForm(const AForm& src);
+		AForm& operator=(const AForm& other);
+		~AForm();
 
 		std::string		getName(void) const;
 		bool			getIsSigned(void) const;
@@ -52,6 +52,6 @@ class Form
 		void	beSigned(const Bureaucrat& bureaucrat);
 };
 
-std::ostream& operator<<(std::ostream& os, const Form& form);
+std::ostream& operator<<(std::ostream& os, const AForm& AForm);
 
 #endif
