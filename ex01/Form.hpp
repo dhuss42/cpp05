@@ -5,6 +5,8 @@
 #include <exception>
 #include "Bureaucrat.hpp"
 
+class Bureaucrat;
+
 class Form
 {
 	private:
@@ -24,7 +26,7 @@ class Form
 				const char * what() const _NOEXCEPT;
 		};
 
-		Form();
+		Form(std::string const name, unsigned int grade_sign, unsigned int grade_exec);
 		Form(const Form& src);
 		Form& operator=(const Form& other);
 		~Form();
@@ -34,11 +36,8 @@ class Form
 		unsigned int	getGradeSign(void) const;
 		unsigned int	getGradeExec(void)	const;
 
-		bool	beSigned(const Bureaucrat& bureaucrat);
-			// changes the form's status to signed if bc's grade is high enough
-			//	<= bc_grade
-			// -> if too low Form::gradetooLow...
-
+		void	checkGrade(unsigned int grade) const;
+		void	beSigned(const Bureaucrat& bureaucrat);
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& form);

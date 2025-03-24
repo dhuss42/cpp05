@@ -1,9 +1,10 @@
 CC = c++
 CPPFILES = main.cpp\
-	Bureaucrat.cpp
+	Bureaucrat.cpp\
+	Form.cpp
 FLAGS = -Wall -Werror -Wextra -std=c++17
 OFILES = $(CPPFILES:.cpp=.o)
-NAME = ex00
+NAME = ex01
 
 $(NAME): $(OFILES)
 	$(CC) $(FLAGS) $(OFILES) -o $(NAME)

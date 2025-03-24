@@ -5,6 +5,8 @@
 #include <exception>
 #include "Form.hpp"
 
+class Form;
+
 class Bureaucrat
 {
 	private:
@@ -22,7 +24,7 @@ class Bureaucrat
 			public:
 				const char* what() const _NOEXCEPT;
 		};
-		
+
 		Bureaucrat(std::string const name, unsigned int grade);
 		Bureaucrat(const Bureaucrat& src);
 		Bureaucrat& operator=(const Bureaucrat& src);
@@ -33,11 +35,8 @@ class Bureaucrat
 
 		void	incrementGrade(void);
 		void	decrementGrade(void);
-	
+
 		void	signForm(Form& form);
-		// calls Form::beSigned()
-		// -> if form is signed it prints name signed form
-		// -> otherwise name couldn't sign form because reason
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& bc);

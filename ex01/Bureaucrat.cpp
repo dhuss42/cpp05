@@ -35,6 +35,30 @@ Bureaucrat::~Bureaucrat()
 {
 }
 
+//------------public member methods------------//
+
+/*--------------------------------------------------*/
+/* checks if form is signed							*/
+/* tries to sign and prints appropriate messages	*/
+/*--------------------------------------------------*/
+void	Bureaucrat::signForm(Form& form)
+{
+	if (form.getIsSigned())
+		std::cout << form.getName() << " is already signed" << std::endl;
+	else
+	{
+		try
+		{
+			form.beSigned(*this);
+			std::cout << this->getName() << " signed " << form.getName() << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+			std::cout << this->getName() << " couldn't sign " << form.getName() << " because the bureaucrat's grade [" << this->getGrade() << "] is too low! The required grade is [" << form.getGradeSign() << "]" << std::endl;
+		}
+	}
+}
+
 //------------getters------------//
 
 /*----------------------*/
