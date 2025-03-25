@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:04:33 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/24 16:04:34 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/03/25 10:41:10 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ class AForm
 			public:
 				const char * what() const _NOEXCEPT;
 		};
+		class FormIsSignedException: public std::exception
+		{
+			public:
+				const char * what() const _NOEXCEPT;
+		};
 
 
 		AForm(std::string const name, unsigned int grade_sign, unsigned int grade_exec);
@@ -58,7 +63,7 @@ class AForm
 
 		void	checkGrade(unsigned int grade) const;
 		void	beSigned(const Bureaucrat& bureaucrat);
-		void	execute(Bureaucrat const & executor) const;
+		int		execute(Bureaucrat const & executor) const;
 };
 
 std::ostream& operator<<(std::ostream& os, const AForm& AForm);

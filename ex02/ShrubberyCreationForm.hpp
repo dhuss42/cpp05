@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/25 11:39:49 by dhuss             #+#    #+#             */
+/*   Updated: 2025/03/25 11:39:50 by dhuss            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SHRUBBERYCREATIONFORM_CPP
 # define SHRUBBERYCREATIONFORM_CPP
 
@@ -7,7 +19,7 @@
 class ShrubberyCreationForm : public AForm
 {
 	private:
-		std::string _target;
+		std::string	_target;
 	public:
 		ShrubberyCreationForm(std::string target);
 		ShrubberyCreationForm(const ShrubberyCreationForm& src);
@@ -17,11 +29,4 @@ class ShrubberyCreationForm : public AForm
 		void executeIt(void) const;
 };
 
-
-// sign grade 145
-// execute grade 137
-// creates a file target_shrubbery in wc and writes ASCII trees inside it
-
-// one parameter in constructor
-//	the target of the form
 #endif
