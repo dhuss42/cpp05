@@ -28,7 +28,7 @@ $(NAME): $(OFILES)
 all: $(NAME)
 
 clean:
-	rm -rf $(OFILES)
+	rm -rf $(OFILES) *_shrubbery
 
 fclean:	clean
 	rm -rf $(NAME)

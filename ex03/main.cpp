@@ -39,9 +39,11 @@ int	main(void)
 	mrBusy.executeForm(*formPresi);
 
 	std::cout << "\033[35m--> Error\033[37m" << std::endl;
-	std::cout << "\033[35m--> Presi\033[37m" << std::endl;
-	AForm*	formError;
-	formError = intern.makeForm("a", "bob");
-	mrBusy.signForm(*formError);
-	mrBusy.executeForm(*formError);
+		AForm*	formError;
+		formError = intern.makeForm("a", "bob");
+		if (formError)
+		{
+			mrBusy.signForm(*formError);
+			mrBusy.executeForm(*formError);
+		}
 }
