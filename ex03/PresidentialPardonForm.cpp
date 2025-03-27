@@ -6,11 +6,18 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 11:40:08 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/25 15:19:24 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/03/27 11:52:44 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
+
+/*----------------------*/
+/* Default Constructor	*/
+/*----------------------*/
+PresidentialPardonForm::PresidentialPardonForm() : AForm("default PresidentialPardonForm", 25, 5), _target("default target")
+{
+}
 
 /*----------------------*/
 /* Constructor			*/

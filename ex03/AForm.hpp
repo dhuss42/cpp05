@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:04:33 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/25 10:41:10 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/03/27 11:48:13 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ class AForm
 				const char * what() const _NOEXCEPT;
 		};
 
-
+		AForm();
 		AForm(std::string const name, unsigned int grade_sign, unsigned int grade_exec);
 		AForm(const AForm& src);
 		AForm& operator=(const AForm& other);

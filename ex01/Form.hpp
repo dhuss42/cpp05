@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:04:14 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/24 16:04:14 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/03/27 11:44:53 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ class Form
 				const char * what() const _NOEXCEPT;
 		};
 
+		Form();
 		Form(std::string const name, unsigned int grade_sign, unsigned int grade_exec);
 		Form(const Form& src);
 		Form& operator=(const Form& other);

@@ -6,11 +6,18 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:04:28 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/25 10:47:32 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/03/27 11:47:43 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
+
+/*----------------------*/
+/* Default Constructor	*/
+/*----------------------*/
+AForm::AForm() : _name("default form"), _is_signed(0), _grade_sign(150), _grade_exec(150)
+{
+}
 
 /*----------------------*/
 /* Constructor			*/

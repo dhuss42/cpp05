@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 11:39:58 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/25 11:39:58 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/03/27 11:53:27 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class RobotomyRequestForm : public AForm
 	private:
 		std::string	_target;
 	public:
+		RobotomyRequestForm();
 		RobotomyRequestForm(std::string target);
 		RobotomyRequestForm(const RobotomyRequestForm& src);
 		RobotomyRequestForm& operator=(const RobotomyRequestForm& other);

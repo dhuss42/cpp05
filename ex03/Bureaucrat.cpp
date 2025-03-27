@@ -6,11 +6,18 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:04:38 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/25 15:17:18 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/03/27 11:44:37 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+/*----------------------*/
+/* Default Constructor	*/
+/*----------------------*/
+Bureaucrat::Bureaucrat() : _name("default bureaucrat"), _grade(150)
+{
+}
 
 /*----------------------*/
 /* Constructor			*/

@@ -6,11 +6,18 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 11:17:47 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/25 15:19:18 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/03/27 11:51:00 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+
+/*----------------------*/
+/* Default Constructor	*/
+/*----------------------*/
+RobotomyRequestForm::RobotomyRequestForm() : AForm("default RobotomyRequestForm", 72, 45), _target("default target")
+{
+}
 
 /*----------------------*/
 /* Constructor			*/

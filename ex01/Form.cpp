@@ -6,11 +6,18 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:04:07 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/24 16:04:08 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/03/27 11:48:55 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+
+/*----------------------*/
+/* Default Constructor	*/
+/*----------------------*/
+Form::Form() : _name("default form"), _is_signed(0), _grade_sign(150), _grade_exec(150)
+{
+}
 
 /*----------------------*/
 /* Constructor			*/
@@ -119,4 +126,3 @@ std::ostream& operator<<(std::ostream& os, const Form& form)
 	os << "Form name: [" << form.getName() << "]\n\tStatus:\t\t\t [" << form.getIsSigned() << "]\n\tGrade needed to sign:\t [" << form.getGradeSign() << "]\n\tGrade needed to execute: [" << form.getGradeExec() << "]";
 	return (os);
 }
-

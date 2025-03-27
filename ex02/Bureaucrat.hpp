@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:05:01 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/25 09:08:03 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/03/27 11:44:08 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ class Bureaucrat
 				const char* what() const _NOEXCEPT;
 		};
 
+		Bureaucrat();
 		Bureaucrat(std::string const name, unsigned int grade);
 		Bureaucrat(const Bureaucrat& src);
 		Bureaucrat& operator=(const Bureaucrat& src);

@@ -6,11 +6,18 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 11:39:54 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/25 15:19:42 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/03/27 11:54:08 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
+
+/*----------------------*/
+/* Default Constructor	*/
+/*----------------------*/
+ShrubberyCreationForm::ShrubberyCreationForm() : AForm("default ShrubberyCreationForm", 145, 137), _target("default target")
+{
+}
 
 /*----------------------*/
 /* Constructor			*/
