@@ -31,8 +31,7 @@ Intern::Intern(const Intern& src)
 /*----------------------*/
 Intern& Intern::operator=(const Intern& other)
 {
-	if (this != &other)
-		std::cout << "intern has no private attiributes" << std::endl;
+	(void) other;
 	return (*this);
 }
 
@@ -90,6 +89,6 @@ AForm* Intern::makeForm(std::string name, std::string target)
 			return (form);
 		}
 	}
-	std::cout << name << " is an invalid form name" << std::endl; // segmentation fault
+	std::cout << "Error: invalid string name" << std::endl;
 	return (form);
 }

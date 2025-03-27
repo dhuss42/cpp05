@@ -42,7 +42,7 @@ class Form
 		Form(std::string const name, unsigned int grade_sign, unsigned int grade_exec);
 		Form(const Form& src);
 		Form& operator=(const Form& other);
-		~Form();
+		virtual ~Form();
 
 		std::string		getName(void) const;
 		bool			getIsSigned(void) const;
@@ -50,7 +50,7 @@ class Form
 		unsigned int	getGradeExec(void)	const;
 
 		void	checkGrade(unsigned int grade) const;
-		void	beSigned(const Bureaucrat& bureaucrat);
+		virtual void	beSigned(const Bureaucrat& bureaucrat) = 0; // ?
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& form);
