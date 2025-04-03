@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 16:04:14 by dhuss             #+#    #+#             */
-/*   Updated: 2025/03/27 11:44:53 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/04/03 09:56:18 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ class Form
 		unsigned int	getGradeSign(void) const;
 		unsigned int	getGradeExec(void)	const;
 
-		void	checkGrade(unsigned int grade) const;
-		virtual void	beSigned(const Bureaucrat& bureaucrat) = 0; // ?
+		void			checkGrade(unsigned int grade) const;
+		virtual void	beSigned(const Bureaucrat& bureaucrat);
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& form);
